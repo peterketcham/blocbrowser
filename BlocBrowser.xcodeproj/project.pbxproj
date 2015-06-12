@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7517F331B2A25BA00118863 /* AwesomeFloatingToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = B7517F321B2A25BA00118863 /* AwesomeFloatingToolbar.m */; };
 		B7D024931B229CB50039186E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7D024921B229CB50039186E /* main.m */; };
 		B7D024961B229CB50039186E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7D024951B229CB50039186E /* AppDelegate.m */; };
 		B7D0249C1B229CB50039186E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7D0249A1B229CB50039186E /* Main.storyboard */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7517F311B2A25BA00118863 /* AwesomeFloatingToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AwesomeFloatingToolbar.h; path = BlocBrowser/AwesomeFloatingToolbar.h; sourceTree = "<group>"; };
+		B7517F321B2A25BA00118863 /* AwesomeFloatingToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AwesomeFloatingToolbar.m; path = BlocBrowser/AwesomeFloatingToolbar.m; sourceTree = "<group>"; };
 		B7D0248D1B229CB50039186E /* BlocBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlocBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D024911B229CB50039186E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7D024921B229CB50039186E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,6 +68,8 @@
 			children = (
 				B7D024B61B229D7C0039186E /* WebBrowserViewController.h */,
 				B7D024B71B229D7C0039186E /* WebBrowserViewController.m */,
+				B7517F311B2A25BA00118863 /* AwesomeFloatingToolbar.h */,
+				B7517F321B2A25BA00118863 /* AwesomeFloatingToolbar.m */,
 				B7D0248F1B229CB50039186E /* BlocBrowser */,
 				B7D024A91B229CB50039186E /* BlocBrowserTests */,
 				B7D0248E1B229CB50039186E /* Products */,
@@ -222,6 +227,7 @@
 				B7D024961B229CB50039186E /* AppDelegate.m in Sources */,
 				B7D024B81B229D7C0039186E /* WebBrowserViewController.m in Sources */,
 				B7D024931B229CB50039186E /* main.m in Sources */,
+				B7517F331B2A25BA00118863 /* AwesomeFloatingToolbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +422,7 @@
 				B7D024B21B229CB50039186E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7D024B31B229CB50039186E /* Build configuration list for PBXNativeTarget "BlocBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				B7D024B51B229CB50039186E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
