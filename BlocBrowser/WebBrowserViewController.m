@@ -62,6 +62,7 @@
 }
 
 - (void) viewWillLayoutSubviews {
+    NSLog(@"viewWillLayoutSubviews called");
     [super viewWillLayoutSubviews];
     
     //make the webview fill the main view
@@ -134,7 +135,7 @@
 
 #pragma mark - AwesomeFloatingToolbarDelegate
 
-- (void) floatingToolbar:(AwesomeFloatingToolbar *)toolbar didSelectButtonWithTitle:(NSString *)title {
+- (void)floatingToolbar:(AwesomeFloatingToolbar *)toolbar didSelectButtonWithTitle:(NSString *)title {
     if ([title isEqual:kWebBrowserBackString]) {
         [self.webview goBack];
     } else if ([title isEqual:kWebBrowserForwardString]) {
@@ -143,6 +144,22 @@
         [self.webview stopLoading];
     } else if ([title isEqual:kWebBrowserRefreshString]) {
         [self.webview reload];
+    }
+}
+
+- (void)floatingToolbar:(AwesomeFloatingToolbar *)toolbar didTryToPanWithOffset:(CGPoint)offset {
+    CGPoint startingPoint = toolbar.frame.origin;
+    CGPoint newPoint = CGPointMake(startingPoint.x + offset.x, startingPoint.y + offset.y);
+        CGRect potentialNewFrame = CGRectMake(newPoint.x, newPoint.y, CGRectGetWidth(toolbar.frame), CGRectGetHeight(toolbar.frame));
+        if (CGRectContainsRect(self.view.bounds, potentialNewFrame)) {
+            toolbar.frame = potentialNewFrame;
+        }
+}
+
+- (void)floatingToolbar:(AwesomeFloatingToolbar *)toolbar didTryToPinchWithScale:(CGFloat)scale {
+    CGRect potentialNewFrame = CGRectMake(toolbar.frame.origin.x, toolbar.frame.origin.y, scale*toolbar.frame.size.width, scale*toolbar.frame.size.height);
+    if (CGRectContainsRect(self.view.bounds, potentialNewFrame)) {
+        toolbar.frame = potentialNewFrame;
     }
 }
 
